@@ -5,23 +5,21 @@
 
 #include "mbed.h"
 
-DigitalIn  mypin(D4); // change this to the button on your board
+InterruptIn  mypin(D4); // change this to the button on your board
 DigitalOut myled(D2);
+DigitalOut BLed(LED1);
 
+void Light(){
+    printf("mypin has value : %d \n\r", mypin.read());
+    myled = !myled; // toggle led based on value of button
+}
+    
 int main()
 {
-    // check mypin object is initialized and connected to a pin
-    if (mypin.is_connected()) {
-        printf("mypin is connected and initialized! \n\r");
-    }
+    mypin.rise(&Light);
 
-    // Optional: set mode as PullUp/PullDown/PullNone/OpenDrain
-    mypin.mode(PullNone);
+    BLed = !BLed;
+    wait_us(250000);
 
-    // press the button and see the console / led change
-    while (1) {
-        printf("mypin has value : %d \n\r", mypin.read());
-        myled = mypin; // toggle led based on value of button
-        ThisThread::sleep_for(250);
-    }
+    
 }
