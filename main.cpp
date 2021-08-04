@@ -8,18 +8,24 @@
 InterruptIn  mypin(D4); // change this to the button on your board
 DigitalOut myled(D2);
 DigitalOut BLed(LED1);
+bool test = false;
 
 void Light(){
-    printf("mypin has value : %d \n\r", mypin.read());
+    test = true;
     myled = !myled; // toggle led based on value of button
 }
     
 int main()
 {
     mypin.rise(&Light);
+    while(true){
+        if(test==true){
+            printf("mypin has value : %d \n\r", mypin.read());
+            test = false;
+        }
 
-    BLed = !BLed;
-    wait_us(250000);
 
-    
+        BLed = !BLed;
+        wait_us(250000);
+    }  
 }
