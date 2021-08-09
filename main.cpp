@@ -27,7 +27,7 @@ int main()
     connection->recvData();
     connection->disconnect();
     
-    // Bring up the ethernet interface
+    /// Bring up the ethernet interface
     /*printf("Ethernet socket example\n");
     net.connect();
 
