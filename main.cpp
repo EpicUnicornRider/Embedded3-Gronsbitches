@@ -1,31 +1,31 @@
-/*
- * Copyright (c) 2006-2020 Arm Limited and affiliates.
- * SPDX-License-Identifier: Apache-2.0
- */
+#include "Client.h"
 
-#include "mbed.h"
+using namespace std;
 
-InterruptIn  mypin(D4); // change this to the button on your board
-DigitalOut myled(D2);
-DigitalOut BLed(LED1);
-bool test = false;
-
-void Light(){
-    test = true;
-    myled = !myled; // toggle led based on value of button
-}
-    
-int main()
+int main(void)
 {
-    mypin.rise(&Light);
-    while(true){
-        if(test==true){
-            printf("mypin has value : %d \n\r", mypin.read());
-            test = false;
-        }
+    
+    //ethLed.start(eth_led);
+    //net = NetworkInterface::get_default_instance();
+    net = new EthernetInterface();
 
+    net->set_network(IP, NETMASK, GATEWAY);  // use static IP address, netmask, gateway
+    if (!net) {
+        printf("Error! No network inteface found.\n");
+        return 0;
+    }
 
-        BLed = !BLed;
-        wait_us(250000);
-    }  
+    //net->set_network (IP, NETMASK, GATEWAY);  // include this for using static IP address
+    nsapi_size_or_error_t   r = net->connect();
+    if (r != NSAPI_ERROR_OK) {
+        printf("Error! net->connect() returned: %d\n", r);
+        return r;
+    }
+
+    start(net);
+    
+    while (true) {
+        clientCon();    
+
+    }
 }
