@@ -1,4 +1,4 @@
-#include "connection.h"
+#include "Sound.h"
 
 const int   OFF = 0;
 const int   ON  = 1;
@@ -75,6 +75,15 @@ char* showWebPage(int status)
     );
     strcat(httpBuf, roomTempStr);
     strcat(httpBuf, "&deg;C</pre>");
+
+    strcat
+    (
+       httpBuf,
+       "<pre>Noise:\t"
+    );
+    strcat(httpBuf, SoundPrint);
+    strcat(httpBuf, "</pre>");
+
     strcat
     (
        httpBuf,

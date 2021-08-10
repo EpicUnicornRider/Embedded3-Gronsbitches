@@ -1,5 +1,6 @@
 BUILD\DISCO_F746NG\ARMC6\main.o: main.cpp \
-  BUILD\DISCO_F746NG\ARMC6\mbed_config.h Client.h Webpage.h connection.h \
+  BUILD\DISCO_F746NG\ARMC6\mbed_config.h Client.h Webpage.h Sound.h \
+  connection.h \
   mbed-os\connectivity\netsocket\include\netsocket\EthernetInterface.h \
   mbed-os\connectivity\netsocket\include\netsocket\nsapi.h \
   mbed-os\connectivity\netsocket\include\netsocket\nsapi_types.h \

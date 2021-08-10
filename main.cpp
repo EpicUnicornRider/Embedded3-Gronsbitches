@@ -1,10 +1,10 @@
-#include "Sound.h"
+#include "Client.h"
 
 using namespace std;
 
 int main(void)
 {
-    Thread1.start(Sound_thread);
+    
     LCDStart();
     //ethLed.start(eth_led);
     //net = NetworkInterface::get_default_instance();
@@ -16,7 +16,6 @@ int main(void)
         return 0;
     }
 
-    //net->set_network (IP, NETMASK, GATEWAY);  // include this for using static IP address
     nsapi_size_or_error_t   r = net->connect();
     if (r != NSAPI_ERROR_OK) {
         printf("Error! net->connect() returned: %d\n", r);
@@ -25,6 +24,8 @@ int main(void)
 
     start(net);
     
+    Thread1.start(Sound_thread);
+
     while (true) {
         clientCon();    
 
