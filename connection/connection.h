@@ -1,5 +1,5 @@
-//#ifndef ETH_HANDLING_H
-//#define ETH_HANDLING_H
+#ifndef ETH_HANDLING_H
+#define ETH_HANDLING_H
 
 #include "mbed.h"
 #include "EthernetInterface.h"
@@ -46,4 +46,4 @@ class myConnection {
         }
 };
 
-//#endif
+#endif
