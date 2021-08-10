@@ -11,6 +11,4 @@ int main()
     char txtSend[] = "";
 
     internet(ip, port, txtSend);
-
-    //vibration();
 }
