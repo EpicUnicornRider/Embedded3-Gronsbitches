@@ -1,9 +1,8 @@
-#ifndef _ETH_HELFE
+//#ifndef ETH_HANDLING_H
+//#define ETH_HANDLING_H
 
 #include "mbed.h"
 #include "EthernetInterface.h"
-
-EthernetInterface net;
 
 class myInternet {
     public:
@@ -47,4 +46,4 @@ class myInternet {
         }
 };
 
-#endif
+//#endif
