@@ -8,7 +8,7 @@ void clientCon(){
         if (client) {
             client->getpeername(&addr);
             printf("Connection succeeded!\n\rIP: %s\n\r", addr.get_ip_address());
-            printf("Output: %s\n\r", output);
+            printf("Output: %d\n", output);
             client->recv(httpBuf, 1500);
             if (strncmp(httpBuf, "GET", 3) != 0) {
                 strcpy(httpHeader, "HTTP/1.0 200 OK top");
@@ -16,7 +16,7 @@ void clientCon(){
                 sendHTTP(client, httpHeader, httpBuf);
             }
             else
-            if ((strncmp(httpBuf, "GET", 3) == 0) && (strncmp(httpBuf + 3, " / ", 3 == 0))) {
+            if ((strncmp(httpBuf, "GET", 3) == 0) && (strncmp(httpBuf + 3, " / ", 3) == 0)) {
                 strcpy(httpHeader, "HTTP/1.0 200 OK buttom");
                 strcpy(httpBuf, "<p>Usage: http://host_or_ip/password</p>\r\n");
                 sendHTTP(client, httpHeader, httpBuf);

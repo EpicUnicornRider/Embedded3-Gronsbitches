@@ -3,6 +3,7 @@
 #include "mbed.h"
 #include <stdio.h>
 #include <string>
+#include "screen.h"
 
 #define IP      "10.130.52.60"
 #define GATEWAY "10.130.52.1"
@@ -124,10 +125,14 @@ void start(EthernetInterface*  net){
     
     printf("\r\n Starting \r\n");
 
+    startup();
+    
     printf("=========================================\r\n");
     printf("Ready to serve clients.\r\n");
     net->get_ip_address(&addr);
     printf("Usage: Type http:\/\/%s\/%s\/  into your web browser and hit ENTER\r\n", addr.get_ip_address(), PASSWORD);
+    
+    Dannebrog();
     
 }
 

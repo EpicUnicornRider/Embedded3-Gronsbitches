@@ -1,10 +1,11 @@
-#include "Client.h"
+#include "Sound.h"
 
 using namespace std;
 
 int main(void)
 {
-    
+    Thread1.start(Sound_thread);
+    LCDStart();
     //ethLed.start(eth_led);
     //net = NetworkInterface::get_default_instance();
     net = new EthernetInterface();
