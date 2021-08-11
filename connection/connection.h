@@ -13,8 +13,14 @@ class myConnection {
         int port;
 
         void socketConnect() {
-            printf("Ethernet socket example\n");
+
             net.connect();
+
+            if(net.get_connection_status()) {
+                printf("Connected successfully\n");
+            } else {
+                printf("Connection failed\n");
+            }
             net.get_ip_address(&a);
 
             printf("IP address: %s\n", a.get_ip_address() ? a.get_ip_address() : "None");
