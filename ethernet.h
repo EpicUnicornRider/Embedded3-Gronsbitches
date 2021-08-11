@@ -2,10 +2,14 @@
 #include <stdio.h>
 #include "EthernetInterface.h"
 #include "LCD_DISCO_F746NG.h"
-//EthernetInterface net;
+#include "ntp-client/NTPClient.h"
+
+EthernetInterface net;
+
+Thread Thread4;
  
 void internet () {
-EthernetInterface net;
+//EthernetInterface net;
 
 BSP_LCD_Clear(LCD_COLOR_BLUE);
 BSP_LCD_SetBackColor(LCD_COLOR_BLUE);
@@ -47,6 +51,22 @@ printf("Ethernet socket example\n");
  
     // Bring down the ethernet interface
     net.disconnect();
-    printf("Done\n");
+    printf("Disconnected\n");
+
   
+}
+
+void Time_thread()
+{
+NTPClient ntp(&net);
+    time_t timestamp = ntp.get_timestamp();
+
+    timestamp += 2 * 60 * 60;
+    set_time(timestamp);
+
+    while(1){
+        timestamp = time(NULL);
+        printf("Current time is %s\r\n", ctime(&timestamp));
+        wait_us(1000000);
+    }
 }

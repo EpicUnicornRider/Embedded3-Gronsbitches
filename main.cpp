@@ -15,4 +15,5 @@ int main()
     Thread1.start(Temperature_thread);
     Thread2.start(Sound_thread);
     Thread3.start(Light_thread);
+    Thread4.start(Time_thread);
 }
