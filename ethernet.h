@@ -11,7 +11,6 @@ class Ethernet {       // The class
     TCPSocket socket;
     char *address;
     int port;
-    char httpRequest[];
     
     void connect() {
         printf("Ethernet socket example\n");
@@ -23,8 +22,6 @@ class Ethernet {       // The class
  
         printf("IP address: %s\n", a.get_ip_address() ? a.get_ip_address() : "None");
  
-        // Open a socket on the network interface, and create a TCP connection to mbed.org
-        TCPSocket socket;
         socket.open(&net);
  
         a.set_ip_address(address);
@@ -33,9 +30,8 @@ class Ethernet {       // The class
         socket.connect(a);
     }
 
-    void sendGetRequest() {
-        char sbuffer[] = "GET %s / HTTP/1.1\r\n HOST: %s\r\n\r\n", httpRequest, address;
-        int scount = socket.send(sbuffer, sizeof sbuffer);
+    void sendGetRequest(char sbuffer[]) {
+        int scount = socket.send(sbuffer, strlen(sbuffer));
         printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
     }
 

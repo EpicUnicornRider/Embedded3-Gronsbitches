@@ -9,10 +9,9 @@ void internet(char ip[], int port, char txtSend[]) {
 
     ethernet.address = ip;
     ethernet.port = port;
-    strcpy(txtSend, ethernet.httpRequest);
 
     ethernet.connect();
-    ethernet.sendGetRequest();
+    ethernet.sendGetRequest(txtSend);
     ethernet.receiveRequest();
     ethernet.closeConnection();
 }
