@@ -14,10 +14,13 @@ char tempCount[50];
 
 void Temperature_thread()
 {
+    BSP_LCD_Clear(LCD_COLOR_BLACK);
+    BSP_LCD_SetBackColor(LCD_COLOR_BLACK);
+    BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
     while(true) {
 
-        int a = Temp.read_u16();
-        float R = 65536.0/a-1.0;
+        int t = Temp.read_u16();
+        float R = 65536.0/t-1.0;
         R = R0*R;
 
         float temperature = 1.0/(log(R/R0)/B+1/298.15)-273.15; //Calculating analog input from temperature sensor to show celsius

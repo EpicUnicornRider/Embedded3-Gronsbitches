@@ -14,8 +14,10 @@ void Startup()
     antal = int(tal);
     printf("\n%c = ASCII %d\n", tal, antal);
 
-    BSP_LCD_Clear(LCD_COLOR_BLACK);
+    BSP_LCD_DisplayStringAt(0, LINE(5), (uint8_t *)"Getting internet connection...", CENTER_MODE);
+
+    /* BSP_LCD_Clear(LCD_COLOR_BLACK);
     BSP_LCD_SetBackColor(LCD_COLOR_BLACK);
     BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-    
+    */
 }
