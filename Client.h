@@ -8,11 +8,13 @@ void clientCon(){
         client = server.accept();
         outputNumber = output;
         if (client) {
+        
             client->getpeername(&addr);
             printf("Connection succeeded!\n\rIP: %s\n\r", addr.get_ip_address());
             printf("Output: %i\n", outputNumber);
             client->recv(httpBuf, 1500);
             if (strncmp(httpBuf, "GET", 3) != 0) {
+                printf("%s\n", httpBuf);
                 strcpy(httpHeader, "HTTP/1.0 200 OK top");
                 strcpy(httpBuf, "<h1>200 OK</h1>");
                 sendHTTP(client, httpHeader, httpBuf);
@@ -24,6 +26,7 @@ void clientCon(){
                 sendHTTP(client, httpHeader, httpBuf);
             }
             else {
+                extern void getData(char httpBuf);
                 int cmd = analyseURL(httpBuf);
                 switch (cmd) {
                     case -3:
@@ -53,6 +56,11 @@ void clientCon(){
                     case 1:
                         output = ON;    // output on
                         strcpy(httpHeader, "HTTP/1.0 200 OK 1");
+                        sendHTTP(client, httpHeader, showWebPage(output));
+                        break;
+                    case 2:
+                        strcpy(httpHeader, "HTTP/1.0 200 OK Temp");
+                        printf("%s", httpBuf);
                         sendHTTP(client, httpHeader, showWebPage(output));
                         break;
                 }

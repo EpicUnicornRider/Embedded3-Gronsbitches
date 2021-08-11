@@ -1,10 +1,10 @@
 #include "Client.h"
+#include <cstdlib>
 
 using namespace std;
 
 int main(void)
 {
-    
     LCDStart();
     //ethLed.start(eth_led);
     //net = NetworkInterface::get_default_instance();

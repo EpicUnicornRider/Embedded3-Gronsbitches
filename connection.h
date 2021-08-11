@@ -1,11 +1,11 @@
 #include "EthernetInterface.h"
 #include "TCPSocket.h"
 #include "mbed.h"
-#include <stdio.h>
 #include <string>
 #include "screen.h"
+#include <stdio.h>
 
-#define IP      "10.130.52.60"
+#define IP      "10.130.52.204"
 #define GATEWAY "10.130.52.1"
 #define NETMASK "255.255.254.0"
 
@@ -14,10 +14,11 @@
 EthernetInterface*  net;
 TCPSocket           server;
 TCPSocket*          client;
-const char          PASSWORD[] = "secret";
+const char          PASSWORD[] = "GronCan";
 char                httpBuf[1500];
 char                httpHeader[256];
 
+char                newTemp[100];
 
 /**
  * @brief   Analyses the received URL
@@ -46,6 +47,9 @@ void ipAdress(){
 
 int8_t analyseURL(char* url)
 {
+    
+    printf("%s\n", url);
+
     if (strlen(url) < (5 + strlen(PASSWORD) + 1))
         return(-1);
 
@@ -64,6 +68,8 @@ int8_t analyseURL(char* url)
     if (*(url + pos++) == ' ')
         return(-2);
 
+
+
     //string  cmd(url.substr(pos, 5));
     *(url + pos + 5) = '\0';    // terminate the cmd string
     char*   cmd = ((url + pos));
@@ -71,6 +77,8 @@ int8_t analyseURL(char* url)
         return(0);
     if (strcmp(cmd, "?sw=1") == 0)
         return(1);
+    if (strcmp(cmd, "?sw=2") == 0)
+        return (2);
     return(-3);
 }
 
