@@ -23,8 +23,6 @@ int main(void)
     }
 
     start(net);
-    
-    Thread1.start(Sound_thread);
 
     while (true) {
         clientCon();    

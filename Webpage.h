@@ -1,16 +1,19 @@
-#include "Sound.h"
+#include "connection.h"
+
 
 const int   OFF = 0;
 const int   ON  = 1;
 
 char* showWebPage(int status)
 {
-    float       roomTemp = 21.8;
+    
     char        roomTempStr[10] = { };
+    char        roomHumidStr[10] = { };
  
     //roomTemp = ds1820.read();
 
     sprintf(roomTempStr, "%3.1f", roomTemp);
+    sprintf(roomHumidStr, "%3.0f", roomHumid);
     memset(httpBuf, 0, sizeof(httpBuf));
 
     /*$off*/
@@ -79,9 +82,9 @@ char* showWebPage(int status)
     strcat
     (
        httpBuf,
-       "<pre>Noise:\t"
+       "<pre>Humidity:\t"
     );
-    strcat(httpBuf, SoundPrint);
+    strcat(httpBuf, roomHumidStr);
     strcat(httpBuf, "</pre>");
 
     strcat

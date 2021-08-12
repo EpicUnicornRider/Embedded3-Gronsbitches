@@ -1,6 +1,5 @@
 BUILD\DISCO_F746NG\ARMC6\main.o: main.cpp \
-  BUILD\DISCO_F746NG\ARMC6\mbed_config.h Client.h Webpage.h Sound.h \
-  connection.h \
+  BUILD\DISCO_F746NG\ARMC6\mbed_config.h Client.h Webpage.h connection.h \
   mbed-os\connectivity\netsocket\include\netsocket\EthernetInterface.h \
   mbed-os\connectivity\netsocket\include\netsocket\nsapi.h \
   mbed-os\connectivity\netsocket\include\netsocket\nsapi_types.h \
@@ -310,4 +309,5 @@ BUILD\DISCO_F746NG\ARMC6\main.o: main.cpp \
   BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\..\Components\rk043fn48h\rk043fn48h.h \
   BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\stm32746g_discovery_sdram.h \
   BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\stm32746g_discovery.h \
-  BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\..\..\..\Utilities\Fonts\fonts.h
+  BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\..\..\..\Utilities\Fonts\fonts.h \
+  recieveData.h
