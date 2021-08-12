@@ -2,15 +2,29 @@
 
 DigitalIn vibrationSensor = D5;
 
-int vibration() {
+void vibration() {
 
-    while(true) {
+    int i = 0;
+    int detected = 0;
 
-        double readout = vibrationSensor.read();
-        printf("Value: %lf /n", readout);
+    while(1) {
 
-        wait_us(500000);
+        while(i <= 100) {
+
+            float readout = vibrationSensor.read();
+            if (readout == 1) {
+                detected = 1;
+            }
+
+            i++;
+
+            ThisThread::sleep_for(10ms);
+        }
+
+        i = 0;
+
+        printf("Value: %d \n", detected);
+
+        detected = 0;
     }
-    
-    return 1;
 }
