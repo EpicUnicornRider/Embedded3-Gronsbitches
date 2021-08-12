@@ -3,13 +3,19 @@
 #include "EthernetInterface.h"
 #include "LCD_DISCO_F746NG.h"
 #include "ntp-client/NTPClient.h"
+#include <iostream>
+#include <string>
+#include <cstring>
+
 
 EthernetInterface net;
+char timenow[50];
+char unit_adr[50];
 
 Thread Thread4;
  
 void internet () {
-//EthernetInterface net;
+    
 
 BSP_LCD_Clear(LCD_COLOR_BLUE);
 BSP_LCD_SetBackColor(LCD_COLOR_BLUE);
@@ -18,15 +24,21 @@ wait_us(300);
 BSP_LCD_DisplayStringAt(0, LINE(5), (uint8_t *)"Connecting to internet...", CENTER_MODE);
 wait_us(1000000);
  
-printf("Ethernet socket example\n");
+printf("Connecting to Ethernet...\n");
     net.connect();
  
     // Show the network address
     SocketAddress a;
     net.get_ip_address(&a);
- 
+
+    BSP_LCD_Clear(LCD_COLOR_BLACK);
+    BSP_LCD_SetBackColor(LCD_COLOR_BLACK);
+    BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+
+    sprintf(unit_adr, "IP Address: %s", a.get_ip_address());
+    BSP_LCD_DisplayStringAt(0, LINE(2), (uint8_t *)unit_adr, CENTER_MODE);
+
     printf("IP address: %s\n", a.get_ip_address() ? a.get_ip_address() : "None");
- 
     // Open a socket on the network interface, and create a TCP connection to mbed.org
     TCPSocket socket;
     socket.open(&net);
@@ -37,7 +49,7 @@ printf("Ethernet socket example\n");
  
     socket.connect(a);
     // Send a simple http request
-    char sbuffer[] = "GET /GronCan/?sw=1 / HTTP/1.1\r\n HOST: 10.130.52.60\r\n\r\n";
+    char sbuffer[] = "GET /GronCan/?sw=1 / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n";
     int scount = socket.send(sbuffer, sizeof sbuffer);
     printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
  
@@ -58,7 +70,7 @@ printf("Ethernet socket example\n");
 
 void Time_thread()
 {
-NTPClient ntp(&net);
+    NTPClient ntp(&net);
     time_t timestamp = ntp.get_timestamp();
 
     timestamp += 2 * 60 * 60;
@@ -66,7 +78,10 @@ NTPClient ntp(&net);
 
     while(1){
         timestamp = time(NULL);
-        printf("Current time is %s\r\n", ctime(&timestamp));
-        wait_us(1000000);
+        string str = ctime(&timestamp);
+        printf("%s\n", str.substr(11,8).c_str());
+        sprintf(timenow, "Time: %s", str.substr(11,8).c_str());
+        BSP_LCD_DisplayStringAt(0, LINE(5), (uint8_t *)timenow, CENTER_MODE); //Display current time reading on LCD display
+        wait_us(500000);
     }
 }
