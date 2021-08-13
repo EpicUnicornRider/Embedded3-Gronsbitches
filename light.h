@@ -9,12 +9,13 @@ Thread Thread3;
 
 int32_t LightA = 0;
 char lights[50];
+float g = 0;
 
 void Light_thread()
 {
     while(true) {
 
-        float g = Light.read(); //read light
+        g = Light.read(); //read light
         LightA = 0;
         for(int i=0; i<32; i++) {
             LightA += Light.read_u16();
@@ -26,13 +27,13 @@ void Light_thread()
         
         if(g < 0.3){
             printf("It's dark! Turning on lights...\n");
-            LED = 1;
+            LED = 0;
             sprintf(lights, "ON");
             BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
         }
         else{
             printf("There is enough light. Turning off lights...\n");
-            LED = 0;
+            LED = 1;
             sprintf(lights, "OFF");
             BSP_LCD_SetTextColor(LCD_COLOR_RED);
 

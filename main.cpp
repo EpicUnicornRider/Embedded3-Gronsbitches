@@ -1,6 +1,6 @@
 #include "mbed.h"
 #include "LCD_DISCO_F746NG.h"
-#include "light.h"
+//#include "light.h"
 #include "startup.h"
 #include "ethernet.h"
 #include "sound.h"
@@ -15,5 +15,5 @@ int main()
     Thread2.start(Sound_thread);
     Thread3.start(Light_thread);
     Thread4.start(Time_thread);
-    //LightInfo();
+    LightInfo();
 }

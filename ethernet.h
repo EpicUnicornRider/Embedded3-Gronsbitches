@@ -6,8 +6,9 @@
 //#include <iostream>
 #include <string>
 #include <cstring>
+#include "light.h"
 
-//AnalogIn Light(A2); //Readings from light sensor
+//AnalogIn Light2(A2); //Readings from light sensor
 
 EthernetInterface net;
 SocketAddress a;
@@ -51,7 +52,7 @@ printf("Connecting to Ethernet...\n");
     socket.connect(a);
     // Send a simple http request
     char sbuffer[] = "GET /GronCan/ / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n";
-    //sprintf(sbuffer, "GET /GronCan/?sw=1 /LIGHT/ %f / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", g);
+    //sprintf(sbuffer, "GET /GronCan/ /LIGHTSTATUS/ %i / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", g);
     int scount = socket.send(sbuffer, sizeof sbuffer);
     printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
  
@@ -70,26 +71,32 @@ printf("Connecting to Ethernet...\n");
   
 }
 
-/*void LightInfo()
+void LightInfo()
 {
-    float g = Light.read();
+    while(true) {
+
+    //float g = Light2.read();
+    bool lightstat;
     net.connect();
- 
-    // Show the network address
-    SocketAddress a;
-    
+     
     // Open a socket on the network interface, and create a TCP connection to mbed.org
-    TCPSocket socket;
     socket.open(&net);
  
     //net.gethostbyname("ifconfig.io", &a);
     a.set_ip_address("10.130.52.204");
     a.set_port(80);
+
+    if(g < 0.3){
+        lightstat = 1;
+    }
+    else{
+        lightstat = 0;
+    }
  
     socket.connect(a);
     // Send a simple http request
     char sbuffer[] = "GET /GronCan/ / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n";
-    sprintf(sbuffer, "GET /GronCan/ /LIGHT/ %f / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", g);
+    sprintf(sbuffer, "GET /GronCan/ /LIGHTSTATUS/ %i / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", lightstat);
     int scount = socket.send(sbuffer, sizeof sbuffer);
     printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
  
@@ -104,7 +111,9 @@ printf("Connecting to Ethernet...\n");
     // Bring down the ethernet interface
     net.disconnect();
     printf("Disconnected\n");
-}*/
+    wait_us(10000000);
+    }
+}
 
 void Time_thread()
 {
