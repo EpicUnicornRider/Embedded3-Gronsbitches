@@ -12,7 +12,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\drivers\device_key\source\DeviceKey.o: \
   mbed-os\connectivity\mbedtls\include\mbedtls\platform.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\platform_time.h \
   mbed-os\storage\kvstore\include\kvstore\KVStore.h \
-  mbed-os\storage\kvstore\include\kvstore\TDBStore.h \
+  mbed-os\storage\kvstore\tdbstore\include\tdbstore\TDBStore.h \
   mbed-os\storage\blockdevice\include\blockdevice\BlockDevice.h \
   mbed-os\storage\blockdevice\include\blockdevice\BufferedBlockDevice.h \
   mbed-os\storage\blockdevice\include\blockdevice\BlockDevice.h \
@@ -33,7 +33,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\drivers\device_key\source\DeviceKey.o: \
   mbed-os\platform\include\platform\ScopedLock.h \
   mbed-os\platform\include\platform\mbed_error.h \
   mbed-os\platform\include\platform\mbed_retarget.h \
-  mbed-os\storage\kvstore\include\kvstore\KVMap.h \
+  mbed-os\storage\kvstore\kvstore_global_api\include\kvstore_global_api\KVMap.h \
   mbed-os\platform\include\platform\PlatformMutex.h \
   mbed-os\platform\include\platform\SingletonPtr.h \
   mbed-os\platform\include\platform\mbed_assert.h \
@@ -134,6 +134,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\drivers\device_key\source\DeviceKey.o: \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \

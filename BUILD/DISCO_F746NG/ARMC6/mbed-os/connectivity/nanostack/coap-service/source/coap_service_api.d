@@ -7,6 +7,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\coap-service\source\coap
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_trace.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\libraries\mbed-coap\mbed-coap\sn_coap_header.h \
   mbed-os\connectivity\nanostack\coap-service\coap-service\coap_service_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ns_address.h \

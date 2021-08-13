@@ -47,6 +47,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ccmLIB.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\platform\arm_hal_aes.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\Bootstraps\protocol_6lowpan.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mlme.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mac_api.h \

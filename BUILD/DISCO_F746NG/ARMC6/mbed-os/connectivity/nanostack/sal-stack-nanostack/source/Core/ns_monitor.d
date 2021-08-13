@@ -21,6 +21,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\ipv6_stack\ipv6_routing_table.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_list.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_address_internal.h \
@@ -41,4 +42,5 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\pan_blacklist\pan_blacklist_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\mac_neighbor_table\mac_neighbor_table.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_polling_api.h \
-  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_pae_controller.h
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_pae_controller.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\lowpan_adaptation_interface.h

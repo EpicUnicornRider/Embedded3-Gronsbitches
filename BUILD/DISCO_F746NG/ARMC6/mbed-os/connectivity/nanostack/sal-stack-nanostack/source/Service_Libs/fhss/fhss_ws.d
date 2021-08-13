@@ -30,6 +30,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\fhss\channel_functions.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\fhss\fhss_ws.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\common_functions.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_callback_timer.h \
   mbed-os\platform\randlib\include\mbed-client-randlib\randLIB.h \

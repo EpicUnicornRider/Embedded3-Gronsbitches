@@ -30,6 +30,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6_prefix.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\etx\etx.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\NWK_INTERFACE\Include\protocol_abstract.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ipv6_resolution.h

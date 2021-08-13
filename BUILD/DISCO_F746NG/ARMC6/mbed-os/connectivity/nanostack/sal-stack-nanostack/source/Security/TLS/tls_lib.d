@@ -38,6 +38,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Security\TLS\tls_ccm_crypt.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Security\Common\sec_lib.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_nvm_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Security\PANA\pana.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Security\PANA\pana_header.h \

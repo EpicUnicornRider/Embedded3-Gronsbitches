@@ -42,4 +42,5 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\mac_neighbor_table\mac_neighbor_table.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_polling_api.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\libNET\src\net_dns_internal.h

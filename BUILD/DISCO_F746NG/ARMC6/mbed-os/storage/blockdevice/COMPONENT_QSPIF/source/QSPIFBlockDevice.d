@@ -1,7 +1,7 @@
 BUILD\DISCO_F746NG\ARMC6\mbed-os\storage\blockdevice\COMPONENT_QSPIF\source\QSPIFBlockDevice.o: \
   mbed-os\storage\blockdevice\COMPONENT_QSPIF\source\QSPIFBlockDevice.cpp \
   BUILD\DISCO_F746NG\ARMC6\mbed_config.h \
-  mbed-os\drivers\include\drivers\internal\SFDP.h \
+  mbed-os\storage\blockdevice\include\blockdevice\internal\SFDP.h \
   mbed-os\storage\blockdevice\include\blockdevice\BlockDevice.h \
   mbed-os\platform\include\platform\Callback.h \
   mbed-os\platform\cxxsupport\mstd_cstddef \
@@ -109,6 +109,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\storage\blockdevice\COMPONENT_QSPIF\source\QSPI
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \

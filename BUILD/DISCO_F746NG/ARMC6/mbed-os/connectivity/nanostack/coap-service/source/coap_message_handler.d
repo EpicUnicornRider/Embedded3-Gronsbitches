@@ -3,6 +3,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\coap-service\source\coap
   BUILD\DISCO_F746NG\ARMC6\mbed_config.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\coap-service\source\include\coap_service_api_internal.h \
   mbed-os\connectivity\nanostack\coap-service\source\include\coap_message_handler.h \
   mbed-os\connectivity\libraries\mbed-coap\mbed-coap\sn_coap_header.h \

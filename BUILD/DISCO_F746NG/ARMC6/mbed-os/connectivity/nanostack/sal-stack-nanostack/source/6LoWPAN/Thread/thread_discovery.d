@@ -29,6 +29,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\platform\randlib\include\mbed-client-randlib\randLIB.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\Thread\thread_discovery.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\NWK_INTERFACE\Include\protocol.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\NWK_INTERFACE\Include\protocol_abstract.h \

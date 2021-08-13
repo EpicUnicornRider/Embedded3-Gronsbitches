@@ -26,6 +26,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event_timer.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\libDHCPv6\libDHCPv6.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\libDHCPv6\libDHCPv6_server.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\DHCPv6_Server\DHCPv6_server_service.h \

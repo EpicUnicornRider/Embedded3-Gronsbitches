@@ -23,6 +23,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_list.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_socket.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_error_types.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_buffer.h \

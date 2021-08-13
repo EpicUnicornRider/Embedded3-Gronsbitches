@@ -21,6 +21,9 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
+  mbed-os\platform\randlib\include\mbed-client-randlib\randLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\common_functions.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_interface.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\platform\arm_hal_phy.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\socket_api.h \
@@ -59,6 +62,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_bootstrap.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_cfg_settings.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_pae_key_storage.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_pae_nvm_store.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\RPL\rpl_control.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\RPL\rpl_data.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6.h \

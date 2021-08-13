@@ -143,6 +143,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\source\Nanostack.o: \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
@@ -205,6 +206,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\source\Nanostack.o: \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_scheduler.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ns_address.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event_timer.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event.h \
   mbed-os\platform\randlib\include\mbed-client-randlib\randLIB.h \

@@ -136,6 +136,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\drivers\cellular\MultiTech\Dragonf
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
@@ -161,4 +162,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\drivers\cellular\MultiTech\Dragonf
   mbed-os\connectivity\cellular\include\cellular\framework\API\ATHandler.h \
   mbed-os\connectivity\drivers\cellular\MultiTech\DragonflyNano\PPP\SARA4_PPP_CellularNetwork.h \
   mbed-os\connectivity\cellular\include\cellular\framework\AT\AT_CellularNetwork.h \
-  mbed-os\connectivity\cellular\include\cellular\framework\AT\AT_CellularDevice.h
+  mbed-os\connectivity\cellular\include\cellular\framework\AT\AT_CellularDevice.h \
+  mbed-os\connectivity\cellular\include\cellular\framework\common\CellularUtil.h \
+  mbed-os\connectivity\cellular\include\cellular\framework\common\CellularLog.h \
+  mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h

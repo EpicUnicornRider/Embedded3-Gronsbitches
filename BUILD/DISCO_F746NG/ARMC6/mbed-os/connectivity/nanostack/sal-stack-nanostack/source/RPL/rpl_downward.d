@@ -23,6 +23,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_trace.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\platform\randlib\include\mbed-client-randlib\randLIB.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ip6string.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6.h \
@@ -46,6 +47,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\pan_blacklist\pan_blacklist_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\mac_neighbor_table\mac_neighbor_table.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_polling_api.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ip.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_rpl.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\RPL\rpl_protocol.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\RPL\rpl_policy.h \

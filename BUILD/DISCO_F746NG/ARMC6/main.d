@@ -141,6 +141,7 @@ BUILD\DISCO_F746NG\ARMC6\main.o: main.cpp \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
@@ -304,7 +305,9 @@ BUILD\DISCO_F746NG\ARMC6\main.o: main.cpp \
   mbed-os\platform\include\platform\mbed_mpu_mgmt.h \
   mbed-os\hal\include\hal\mpu_api.h \
   mbed-os\platform\include\platform\ScopedRamExecutionLock.h \
-  mbed-os\platform\include\platform\mbed_stats.h screen.h \
+  mbed-os\platform\include\platform\mbed_stats.h \
+  mbed-os\platform\include\platform\Stream.h \
+  mbed-os\platform\include\platform\FileLike.h screen.h \
   BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\stm32746g_discovery_lcd.h \
   BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\..\Components\rk043fn48h\rk043fn48h.h \
   BSP_DISCO_F746NG\Drivers\BSP\STM32746G-Discovery\stm32746g_discovery_sdram.h \

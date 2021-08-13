@@ -20,6 +20,8 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_interface.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\platform\arm_hal_phy.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event.h \
@@ -66,6 +68,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6_prefix.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6_radv.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ipv6_constants.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ip.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\fhss\channel_list.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_common_defines.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_config.h \
@@ -100,4 +103,5 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_eapol_pdu.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_eapol_auth_relay.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\ws\ws_eapol_relay.h \
-  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\libNET\src\net_dns_internal.h
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\libNET\src\net_dns_internal.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\random_early_detection\random_early_detection_api.h

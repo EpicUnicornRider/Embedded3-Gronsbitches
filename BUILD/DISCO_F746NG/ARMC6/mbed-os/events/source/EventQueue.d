@@ -24,6 +24,8 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\events\source\EventQueue.o: \
   mbed-os\platform\include\platform\NonCopyable.h \
   mbed-os\events\include\events\mbed_events.h \
   mbed-os\events\include\events\Event.h \
+  mbed-os\platform\include\platform\mbed_error.h \
+  mbed-os\platform\include\platform\mbed_retarget.h \
   mbed-os\events\include\events\UserAllocatedEvent.h \
   mbed-os\platform\include\platform\mbed_atomic.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\cmsis.h \

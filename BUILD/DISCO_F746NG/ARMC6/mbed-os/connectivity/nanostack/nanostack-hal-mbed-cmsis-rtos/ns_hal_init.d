@@ -13,4 +13,5 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis
   mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis-rtos\arm_hal_interrupt_private.h \
   mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis-rtos\ns_hal_init.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis-rtos\ns_file_system_api.h

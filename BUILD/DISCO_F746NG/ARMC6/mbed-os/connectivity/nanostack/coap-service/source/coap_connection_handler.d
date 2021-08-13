@@ -33,6 +33,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\coap-service\source\coap
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_trace.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\socket_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ns_address.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_interface.h \

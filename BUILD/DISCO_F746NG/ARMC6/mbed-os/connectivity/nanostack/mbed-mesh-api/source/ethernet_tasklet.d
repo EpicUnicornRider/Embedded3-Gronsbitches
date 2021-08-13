@@ -11,6 +11,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\mbed-mesh-api\source\eth
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\platform\arm_hal_phy.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ip6string.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\mbed-mesh-api\source\include\mesh_system.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_scheduler.h \
   mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis-rtos\ns_event_loop.h \

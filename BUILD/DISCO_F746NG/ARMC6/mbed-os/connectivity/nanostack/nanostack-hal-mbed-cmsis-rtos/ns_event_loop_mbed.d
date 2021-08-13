@@ -112,5 +112,6 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis
   mbed-os\platform\cxxsupport\mstd_iterator \
   mbed-os\platform\include\platform\NonCopyable.h \
   mbed-os\events\include\events\Event.h \
+  mbed-os\platform\include\platform\mbed_error.h \
   mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis-rtos\ns_event_loop_mutex.h \
   mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis-rtos\ns_event_loop.h

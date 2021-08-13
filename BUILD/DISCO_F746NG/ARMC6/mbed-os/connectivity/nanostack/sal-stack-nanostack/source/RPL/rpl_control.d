@@ -22,6 +22,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\common_functions.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_buffer.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_address_internal.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_list.h \
@@ -46,6 +47,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ipv6_constants.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\icmpv6_prefix.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ip.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\ipv6_stack\protocol_ipv6.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Service_Libs\etx\etx.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\net_rpl.h \

@@ -1,17 +1,13 @@
 #include "Webpage.h"
 
-DigitalOut          output(LED1);
-int outputNumber;
 
 void clientCon(){
     //listening for http GET request
         client = server.accept();
-        outputNumber = output;
         if (client) {
         
             client->getpeername(&addr);
             printf("Connection succeeded!\n\rIP: %s\n\r", addr.get_ip_address());
-            printf("Output: %i\n", outputNumber);
             client->recv(httpBuf, 1500);
             if (strncmp(httpBuf, "GET", 3) != 0) {
                 strcpy(httpHeader, "HTTP/1.0 200 OK top");
@@ -30,7 +26,7 @@ void clientCon(){
                     case -3:
                         // update webpage
                         strcpy(httpHeader, "HTTP/1.0 200 OK -3");
-                        sendHTTP(client, httpHeader, showWebPage(output));
+                        sendHTTP(client, httpHeader, showWebPage());
                         break;
 
                     case -2:

@@ -4,7 +4,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\storage\kvstore\kv_config\source\kv_config.o: \
   mbed-os\storage\kvstore\kv_config\include\kv_config\kv_config.h \
   mbed-os\storage\blockdevice\include\blockdevice\BlockDevice.h \
   mbed-os\storage\kvstore\include\kvstore\KVStore.h \
-  mbed-os\storage\kvstore\include\kvstore\KVMap.h \
+  mbed-os\storage\kvstore\kvstore_global_api\include\kvstore_global_api\KVMap.h \
   mbed-os\platform\include\platform\PlatformMutex.h \
   mbed-os\platform\include\platform\NonCopyable.h \
   mbed-os\rtos\include\rtos\Mutex.h \
@@ -121,6 +121,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\storage\kvstore\kv_config\source\kv_config.o: \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
@@ -136,7 +137,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\storage\kvstore\kv_config\source\kv_config.o: \
   mbed-os\platform\include\platform\DirHandle.h \
   mbed-os\platform\include\platform\FileSystemLike.h \
   mbed-os\platform\include\platform\FileSystemHandle.h \
-  mbed-os\storage\kvstore\include\kvstore\FileSystemStore.h \
+  mbed-os\storage\kvstore\filesystemstore\include\filesystemstore\FileSystemStore.h \
   mbed-os\storage\blockdevice\include\blockdevice\SlicingBlockDevice.h \
   mbed-os\storage\blockdevice\include\blockdevice\BlockDevice.h \
   mbed-os\storage\filesystem\fat\include\fat\FATFileSystem.h \
@@ -147,12 +148,11 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\storage\kvstore\kv_config\source\kv_config.o: \
   mbed-os\storage\filesystem\fat\ChaN\ffconf.h \
   mbed-os\storage\filesystem\littlefs\include\littlefs\LittleFileSystem.h \
   mbed-os\storage\filesystem\littlefs\littlefs\lfs.h \
-  mbed-os\storage\kvstore\include\kvstore\TDBStore.h \
+  mbed-os\storage\kvstore\tdbstore\include\tdbstore\TDBStore.h \
   mbed-os\storage\blockdevice\include\blockdevice\BufferedBlockDevice.h \
   mbed-os\platform\include\platform\mbed_error.h \
   mbed-os\drivers\include\drivers\FlashIAP.h \
   mbed-os\hal\include\hal\flash_api.h \
-  mbed-os\storage\blockdevice\include\blockdevice\FlashSimBlockDevice.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\storage\kvstore\securestore\include\securestore\SecureStore.h \
   mbed-os\connectivity\mbedtls\include\mbedtls\config.h \
@@ -165,4 +165,4 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\storage\kvstore\kv_config\source\kv_config.o: \
   mbed-os\storage\blockdevice\COMPONENT_QSPIF\include\QSPIF\QSPIFBlockDevice.h \
   mbed-os\drivers\include\drivers\QSPI.h \
   mbed-os\hal\include\hal\qspi_api.h mbed-os\hal\include\hal\pinmap.h \
-  mbed-os\drivers\include\drivers\internal\SFDP.h
+  mbed-os\storage\blockdevice\include\blockdevice\internal\SFDP.h

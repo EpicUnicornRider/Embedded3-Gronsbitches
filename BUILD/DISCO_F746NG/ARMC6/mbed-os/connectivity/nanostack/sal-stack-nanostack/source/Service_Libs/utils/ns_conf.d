@@ -17,6 +17,9 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_rf_tunnel.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_border_router.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack-eventloop\nanostack-event-loop\eventOS_event.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_list.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_monitor.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mac_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mlme.h \

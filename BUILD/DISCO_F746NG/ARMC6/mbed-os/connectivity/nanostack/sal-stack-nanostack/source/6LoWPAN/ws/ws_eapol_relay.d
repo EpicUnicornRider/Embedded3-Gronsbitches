@@ -22,6 +22,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_trace.h \
   mbed-os\platform\mbed-trace\include\mbed-trace\mbed_trace.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_config.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_ws_extension.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\fhss_api.h \
@@ -48,6 +49,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mac_mcps.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\mac_mcps.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ipv6_constants.h \
+  mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Common_Protocols\ip.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\socket_api.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\nanostack\ns_address.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\6LoWPAN\MAC\mac_helper.h \

@@ -109,6 +109,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
@@ -133,4 +134,6 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\nanostack-hal-mbed-cmsis
   mbed-os\cmsis\CMSIS_5\CMSIS\RTOS2\RTX\Include\rtx_os.h \
   mbed-os\cmsis\device\rtos\include\mbed_rtx_conf.h \
   mbed-os\targets\TARGET_STM\mbed_rtx.h \
+  mbed-os\platform\include\platform\mbed_error.h \
+  mbed-os\platform\include\platform\mbed_retarget.h \
   mbed-os\events\include\events\mbed_shared_queues.h

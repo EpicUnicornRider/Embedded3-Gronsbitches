@@ -48,7 +48,6 @@ void ipAdress(){
 
 int8_t analyseURL(char* url)
 {
-    printf("%s\n", url);
 
     if (strlen(url) < (5 + strlen(PASSWORD) + 1))
         return(-1);

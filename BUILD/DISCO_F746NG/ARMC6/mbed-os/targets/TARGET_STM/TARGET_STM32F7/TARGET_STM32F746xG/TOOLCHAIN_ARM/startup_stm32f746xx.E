@@ -1,8 +1,8 @@
 # 1 ".\\mbed-os\\targets\\TARGET_STM\\TARGET_STM32F7\\TARGET_STM32F746xG\\TOOLCHAIN_ARM\\startup_stm32f746xx.S"
 # 1 "<built-in>" 1
-# 398 "<built-in>"
+# 397 "<built-in>"
 # 1 "./BUILD/DISCO_F746NG/ARMC6\\mbed_config.h" 1
-# 399 "<built-in>" 2
+# 398 "<built-in>" 2
 # 1 ".\\mbed-os\\targets\\TARGET_STM\\TARGET_STM32F7\\TARGET_STM32F746xG\\TOOLCHAIN_ARM\\startup_stm32f746xx.S" 2
 ;*******************************************************************************
 ;* File Name : startup_stm32f746xx.s

@@ -150,6 +150,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\netsocket\source\TLSSocketWrapper.
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_adc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rtc.h \
   mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_pwr.h \
+  mbed-os\targets\TARGET_STM\TARGET_STM32F7\STM32Cube_FW\STM32F7xx_HAL_Driver\stm32f7xx_ll_rcc.h \
   mbed-os\targets\TARGET_STM\gpio_object.h \
   mbed-os\platform\include\platform\mbed_assert.h \
   mbed-os\targets\TARGET_STM\PortNames.h \
@@ -161,6 +162,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\netsocket\source\TLSSocketWrapper.
   mbed-os\events\include\events\internal\equeue_platform.h \
   mbed-os\rtos\include\rtos\internal\mbed_rtos_storage.h \
   mbed-os\events\include\events\Event.h \
+  mbed-os\platform\include\platform\mbed_error.h \
   mbed-os\events\include\events\UserAllocatedEvent.h \
   mbed-os\platform\include\platform\mbed_atomic.h \
   mbed-os\platform\include\platform\internal\mbed_atomic_impl.h \

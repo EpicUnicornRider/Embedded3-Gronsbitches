@@ -36,6 +36,7 @@
 #define MBED_CONF_CELLULAR_CONTROL_PLANE_OPT                                  0                                                                                                // set by library:cellular
 #define MBED_CONF_CELLULAR_DEBUG_AT                                           0                                                                                                // set by library:cellular
 #define MBED_CONF_CELLULAR_MAX_CP_DATA_RECV_LEN                               1358                                                                                             // set by library:cellular
+#define MBED_CONF_CELLULAR_PRESENT                                            1                                                                                                // set by library:cellular
 #define MBED_CONF_CELLULAR_RANDOM_MAX_START_DELAY                             0                                                                                                // set by library:cellular
 #define MBED_CONF_CELLULAR_USE_APN_LOOKUP                                     0                                                                                                // set by library:cellular
 #define MBED_CONF_CELLULAR_USE_SMS                                            0                                                                                                // set by library:cellular
@@ -236,6 +237,7 @@
 #define MBED_CONF_NANOSTACK_HAL_EVENT_LOOP_USE_MBED_EVENTS                    0                                                                                                // set by library:nanostack-hal
 #define MBED_CONF_NANOSTACK_HAL_KVSTORE_PATH                                  "/kv/"                                                                                           // set by library:nanostack-hal
 #define MBED_CONF_NANOSTACK_HAL_USE_KVSTORE                                   0                                                                                                // set by library:nanostack-hal
+#define MBED_CONF_NANOSTACK_LIBSERVICE_NSDYNMEM_TRACKER_ENABLED               0                                                                                                // set by library:nanostack-libservice
 #define MBED_CONF_NANOSTACK_LIBSERVICE_PRESENT                                1                                                                                                // set by library:nanostack-libservice
 #define MBED_CONF_NSAPI_DEFAULT_MESH_TYPE                                     THREAD                                                                                           // set by library:nsapi
 #define MBED_CONF_NSAPI_DEFAULT_STACK                                         LWIP                                                                                             // set by library:nsapi
@@ -285,7 +287,7 @@
 #define MBED_CONF_QSPIF_QSPI_IO1                                              MBED_CONF_DRIVERS_QSPI_IO1                                                                       // set by library:qspif
 #define MBED_CONF_QSPIF_QSPI_IO2                                              MBED_CONF_DRIVERS_QSPI_IO2                                                                       // set by library:qspif
 #define MBED_CONF_QSPIF_QSPI_IO3                                              MBED_CONF_DRIVERS_QSPI_IO3                                                                       // set by library:qspif
-#define MBED_CONF_QSPIF_QSPI_MIN_PROG_SIZE                                    256                                                                                              // set by library:qspif
+#define MBED_CONF_QSPIF_QSPI_MIN_PROG_SIZE                                    1                                                                                                // set by library:qspif
 #define MBED_CONF_QSPIF_QSPI_MIN_READ_SIZE                                    1                                                                                                // set by library:qspif
 #define MBED_CONF_QSPIF_QSPI_POLARITY_MODE                                    0                                                                                                // set by library:qspif
 #define MBED_CONF_QSPIF_QSPI_SCK                                              MBED_CONF_DRIVERS_QSPI_SCK                                                                       // set by library:qspif
@@ -361,14 +363,17 @@
 #define MBED_CONF_STORAGE_TDB_INTERNAL_INTERNAL_SIZE                          0                                                                                                // set by library:storage_tdb_internal
 #define MBED_CONF_TARGET_BOOT_STACK_SIZE                                      0x400                                                                                            // set by library:rtos[*]
 #define MBED_CONF_TARGET_CONSOLE_UART                                         1                                                                                                // set by target:Target
+#define MBED_CONF_TARGET_CUSTOM_TICKERS                                       1                                                                                                // set by target:Target
 #define MBED_CONF_TARGET_DEEP_SLEEP_LATENCY                                   4                                                                                                // set by target:MCU_STM32
 #define MBED_CONF_TARGET_DEFAULT_ADC_VREF                                     NAN                                                                                              // set by target:Target
+#define MBED_CONF_TARGET_GPIO_RESET_AT_INIT                                   0                                                                                                // set by target:MCU_STM32
 #define MBED_CONF_TARGET_INIT_US_TICKER_AT_BOOT                               1                                                                                                // set by target:MCU_STM32
 #define MBED_CONF_TARGET_INTERNAL_FLASH_UNIFORM_SECTORS                       0                                                                                                // set by target:MCU_STM32F7
 #define MBED_CONF_TARGET_LPTICKER_LPTIM                                       1                                                                                                // set by target:MCU_STM32F7
 #define MBED_CONF_TARGET_LPTICKER_LPTIM_CLOCK                                 1                                                                                                // set by target:MCU_STM32
 #define MBED_CONF_TARGET_LPUART_CLOCK_SOURCE                                  USE_LPUART_CLK_LSE|USE_LPUART_CLK_PCLK1                                                          // set by target:MCU_STM32
 #define MBED_CONF_TARGET_LSE_AVAILABLE                                        1                                                                                                // set by target:MCU_STM32
+#define MBED_CONF_TARGET_LSE_DRIVE_LOAD_LEVEL                                 RCC_LSEDRIVE_LOW                                                                                 // set by target:MCU_STM32F7
 #define MBED_CONF_TARGET_MPU_ROM_END                                          0x0fffffff                                                                                       // set by target:Target
 #define MBED_CONF_TARGET_NETWORK_DEFAULT_INTERFACE_TYPE                       ETHERNET                                                                                         // set by target:DISCO_F746NG
 #define MBED_CONF_TARGET_TICKLESS_FROM_US_TICKER                              0                                                                                                // set by target:Target
@@ -406,6 +411,7 @@
 // Macros
 #define MBEDTLS_CIPHER_MODE_CTR                                                                                                                                                // defined by library:SecureStore
 #define NSAPI_PPP_AVAILABLE                                                   (MBED_CONF_PPP_ENABLED || MBED_CONF_LWIP_PPP_ENABLED)                                            // defined by library:ppp
+#define NSDYNMEM_TRACKER_ENABLED                                              MBED_CONF_NANOSTACK_LIBSERVICE_NSDYNMEM_TRACKER_ENABLED                                          // defined by library:nanostack-libservice
 #define NS_USE_EXTERNAL_MBED_TLS                                                                                                                                               // defined by library:nanostack
 #define UNITY_INCLUDE_CONFIG_H                                                                                                                                                 // defined by library:utest
 #define _RTE_                                                                                                                                                                  // defined by library:rtos

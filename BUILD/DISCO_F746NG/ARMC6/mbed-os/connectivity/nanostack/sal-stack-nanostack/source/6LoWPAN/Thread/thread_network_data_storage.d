@@ -19,6 +19,7 @@ BUILD\DISCO_F746NG\ARMC6\mbed-os\connectivity\nanostack\sal-stack-nanostack\sour
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\configs\base\cfg_ws_router.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmemLIB.h \
   mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\ns_types.h \
+  mbed-os\connectivity\libraries\nanostack-libservice\mbed-client-libservice\nsdynmem_tracker.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\NWK_INTERFACE\Include\protocol.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\NWK_INTERFACE\Include\protocol_abstract.h \
   mbed-os\connectivity\nanostack\sal-stack-nanostack\source\Core\include\ns_address_internal.h \

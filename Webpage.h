@@ -4,7 +4,7 @@
 const int   OFF = 0;
 const int   ON  = 1;
 
-char* showWebPage(int status)
+char* showWebPage()
 {
     
     char        roomTempStr[10] = { };
@@ -23,7 +23,7 @@ char* showWebPage(int status)
         "<head>"
             "<meta charset=\"utf-8\">"
             "<meta name=\"viewport\" content=\" initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;\"/>"
-            "<title>Smart Home</title>"
+            "<title>Grøns Cannabis Farm</title>"
             "<link href='http://fonts.googleapis.com/css?family=Droid+Sans&v1' rel='stylesheet' type='text/css'>"
             "<style>"
             ".switch {"
@@ -72,8 +72,7 @@ char* showWebPage(int status)
         "</head>"
 
         "<body>"
-            "<h2><a href=\".\" title=\"Click to refresh the page\">Smart Home</a></h2>"
-            "<p>This is a test</p>\t"
+            "<h2><a href=\".\" title=\"Click to refresh the page\">Grøns Cannabis Farm</a></h2>"
             "<pre>Temperature:\t"
     );
     strcat(httpBuf, roomTempStr);
@@ -85,18 +84,68 @@ char* showWebPage(int status)
        "<pre>Humidity:\t"
     );
     strcat(httpBuf, roomHumidStr);
-    strcat(httpBuf, "</pre>");
+    strcat(httpBuf, "%</pre>");
 
     strcat
     (
        httpBuf,
-       "<pre>Heating:\t"
+       "<pre>Drivhus lys:\t"
     );
-    if(status == ON) {
+    if(lightbulb == ON) {
        strcat
        (
            httpBuf,
-           "<a href=\"./?sw=0\" class=\"switch\"> "
+           " Tændt"
+       );
+    }
+    else {
+       strcat
+       (
+           httpBuf,
+           " Slukket"
+       );
+    }
+    strcat
+    (
+       httpBuf,
+           "</pre>"
+    );
+
+    strcat
+    (
+       httpBuf,
+       "<pre>Vindue:\t"
+    );
+    if(window == ON) {
+       strcat
+       (
+           httpBuf,
+           " Åbent"
+       );
+    }
+    else {
+       strcat
+       (
+           httpBuf,
+           " Lukket"
+       );
+    }
+    strcat
+    (
+       httpBuf,
+           "</pre>"
+    );
+
+    strcat
+    (
+       httpBuf,
+       "<pre>Alarm armeret:\t"
+    );
+    if(armed == ON) {
+       strcat
+       (
+           httpBuf,
+           "<a class=\"switch\"> "
            "<input type=\"checkbox\" checked>"
        );
     }
@@ -104,7 +153,36 @@ char* showWebPage(int status)
        strcat
        (
            httpBuf,
-           "<a href=\"./?sw=1\" class=\"switch\"> "
+           "<a class=\"switch\"> "
+           "<input type=\"checkbox\">"
+       );
+    }
+    strcat
+    (
+       httpBuf,
+           "<div class=\"slider\"></div>"
+           "</pre>"
+           "</a>"
+    );
+
+    strcat
+    (
+       httpBuf,
+       "<pre>Alarm Igang:\t"
+    );
+    if(alarm == ON) {
+       strcat
+       (
+           httpBuf,
+           "<a class=\"switch\"> "
+           "<input type=\"checkbox\" checked>"
+       );
+    }
+    else {
+       strcat
+       (
+           httpBuf,
+           "<a class=\"switch\"> "
            "<input type=\"checkbox\">"
        );
     }
@@ -115,7 +193,7 @@ char* showWebPage(int status)
            "</a>"
            "</pre>"
            "<hr>"
-           "<pre>2017 ARMmbed</pre>"
+           "<pre>2021 Grøns Bitches</pre>"
        "</body>"
     );
     /*$on*/
