@@ -1,6 +1,6 @@
 #ifndef VIBRATION_H
 #define VIBRATION_H
 
-int vibration();
+bool vibration();
 
 #endif /*VIBRATION_H*/

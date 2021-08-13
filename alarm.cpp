@@ -1,10 +1,11 @@
 #include "mbed.h"
+#include "alarmsystem.h"
 
 DigitalIn armAlarm = D2;
-DigitalIn disableAlarm = D3;
 
-int alarm_active = 0;
+bool alarm_active = false;
 int i = 0;
+int countdown = 10;
 
 //alarm_changed will make sure there can only be activated/deactivated once per second.
 bool alarm_changed = false;
@@ -12,21 +13,18 @@ bool alarm_changed = false;
 void arm_alarm() {
 
     while(1) {
-        while(i < 100) {
 
-            if (armAlarm.read() == 1 && alarm_changed != true) {
-                alarm_active = !alarm_active;
-                alarm_changed = 1;
+        if (armAlarm == 1) {
+            if (alarm_active == false) {
+                ThisThread::sleep_for(500ms);
+                alarm_active = true;
+                armalarm();
+            } else {
+                ThisThread::sleep_for(500ms);
+                alarm_active = false;
+                stopalarm();
             }
-
-            i++;
-
-            ThisThread::sleep_for(10ms);
         }
 
-        printf("Alarm status: %d \n", alarm_active);
-
-        alarm_changed = false;
-        i = 0;
     }
 }

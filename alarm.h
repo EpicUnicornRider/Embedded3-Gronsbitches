@@ -1,6 +1,8 @@
 #ifndef ALARM_H
 #define ALARM_H
 
-void arm_alarm();
+bool arm_alarm();
+
+extern int alarm_active;
 
 #endif /*ALARM_H*/

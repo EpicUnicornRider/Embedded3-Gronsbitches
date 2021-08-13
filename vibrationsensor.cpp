@@ -2,12 +2,14 @@
 
 DigitalIn vibrationSensor = D5;
 
-void vibration() {
+bool vibration() {
 
     int i = 0;
     int detected = 0;
 
     while(1) {
+
+        detected = 0;
 
         while(i <= 100) {
 
@@ -21,10 +23,14 @@ void vibration() {
             ThisThread::sleep_for(10ms);
         }
 
+        if(detected == 1) {
+            return true;
+        } else {
+            return false;
+        }
+
         i = 0;
 
         printf("Value: %d \n", detected);
-
-        detected = 0;
     }
 }

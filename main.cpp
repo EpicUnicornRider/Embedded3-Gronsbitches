@@ -1,6 +1,8 @@
 #include "mbed.h"
 #include "internet.h"
 #include "vibrationsensor.h"
+#include "controllerscreen.h"
+#include "alarmsystem.h"
 #include "alarm.h"
 #include "rtos.h"
 
@@ -17,19 +19,11 @@ int main()
 
     int num = 1;
 
-    thread1.start(vibration);
+    startsystem();
+
     thread2.start(arm_alarm);
 
-    /*while(1) {
 
-
-
-        printf("Hello %d\n", num);
-
-        num = num + 1;
-
-        ThisThread::sleep_for(1s);
-        //wait_us(1000000);
-
-    }*/
-}
+    thread1.start(vibration);
+    //thread2.start(arm_alarm);
+}   
