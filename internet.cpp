@@ -4,7 +4,7 @@
 #include "EthernetInterface.h"
 #include "ethernet.h"
 
-void internet(char ip[], int port, std::string txtSend) {
+std::string internet(char ip[], int port, std::string txtSend) {
 
     char txtarray[100];
 
@@ -20,6 +20,8 @@ void internet(char ip[], int port, std::string txtSend) {
 
     ethernet.connect();
     ethernet.sendGetRequest(txtarray);
-    ethernet.receiveRequest();
+    string recv = ethernet.receiveRequest();
     ethernet.closeConnection();
+
+    return recv;
 }

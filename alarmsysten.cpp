@@ -21,6 +21,7 @@ void stopalarm() {
 }
 
 void armalarm() {
+    tryingtoarm();
     alarmarmed();
     countdownalarmscreen();
     detecton = true;
@@ -35,6 +36,10 @@ void alarmdetect() {
                     alarm();
                 }
             }
+
+            //TODO: THIS NEEDS TO GET DATA FROM GRON
+            //printf("%s", getsoundstatus().c_str());
+            //getsoundstatus()
             ThisThread::sleep_for(50ms);
         }
 }

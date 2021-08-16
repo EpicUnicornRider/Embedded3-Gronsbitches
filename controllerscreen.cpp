@@ -54,6 +54,16 @@ void alarm() {
     BSP_LCD_DisplayStringAt(0, LINE(7), (uint8_t*)"ALARM! INTRUTION DETECTED!", CENTER_MODE);
 }
 
+void tryingtoarm() {
+    clearscreen();
+    BSP_LCD_SetBackColor(LCD_COLOR_BLACK);
+    BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+    BSP_LCD_DisplayStringAt(-90, LINE(3), (uint8_t*)"Alarm: ", CENTER_MODE);
+    BSP_LCD_SetTextColor(LCD_COLOR_RED);
+    BSP_LCD_DisplayStringAt(75, LINE(3), (uint8_t*)"TRYING TO ARM", CENTER_MODE);
+}
+
+
 void countdownalarmscreen() {
 
     icounter = 10;

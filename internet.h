@@ -3,6 +3,6 @@
 
 #include <string>
 
-void internet(char ip[], int port, std::string txtsend);
+std::string internet(char ip[], int port, std::string txtsend);
 
 #endif /*INTERNET_H*/

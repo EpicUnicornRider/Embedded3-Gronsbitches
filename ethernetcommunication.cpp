@@ -20,6 +20,6 @@ void alarmunarmed() {
     internet(ip, port, "GET /GronCan/ /ARMED/ 0 / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n");
 }
 
-void getsoundstatus() {
-    internet(ip, port, "GET /GronCan/ /GETSOUND/ HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n");
+std::string getsoundstatus() {
+    return internet(ip, port, "GET /GronCan/ /GETSOUND/ HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n");
 }
