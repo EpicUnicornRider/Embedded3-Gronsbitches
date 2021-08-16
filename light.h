@@ -1,6 +1,5 @@
 #include "mbed.h"
 #include "LCD_DISCO_F746NG.h"
-//#include "ethernet.h"
 
 AnalogIn Light(A2); //Readings from light sensor
 DigitalOut LED(D2); //LED Socket simulating light on/off

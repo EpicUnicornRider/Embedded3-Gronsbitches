@@ -13,19 +13,24 @@ int Count = 0;
 char b[1000];
 char c[20];
 int resetBtn = 0;
-
+int loudestsound;
 
 
 void Sound_thread()
 {
     while(true) {
 
-        float f = Sound.read(); //reads the sound
+        float f = Sound.read(); // Reads the sound
         for(int i=0; i<32; i++) {
             SoundA += Sound.read_u16();
         }
 
         SoundA >>= 5;
+
+        if(SoundA > loudestsound) {
+            loudestsound = SoundA;
+            printf("Loudest Sound: %i\n", loudestsound);
+        }
 
         if(SoundA > 30000 && LightForSound.read_u16() < 10000) { //if the sound and light is above and below certain criteria then the alarm starts
 

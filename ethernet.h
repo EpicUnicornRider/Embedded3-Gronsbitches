@@ -1,14 +1,11 @@
 #include "mbed.h"
-//#include <stdio.h>
 #include "EthernetInterface.h"
 #include "LCD_DISCO_F746NG.h"
 #include "ntp-client/NTPClient.h"
-//#include <iostream>
 #include <string>
 #include <cstring>
 #include "light.h"
-
-//AnalogIn Light2(A2); //Readings from light sensor
+#include "sound.h"
 
 EthernetInterface net;
 SocketAddress a;
@@ -45,14 +42,12 @@ printf("Connecting to Ethernet...\n");
     // Open a socket on the network interface, and create a TCP connection to mbed.org
     socket.open(&net);
  
-    //net.gethostbyname("ifconfig.io", &a);
     a.set_ip_address("10.130.52.204");
     a.set_port(80);
  
     socket.connect(a);
     // Send a simple http request
     char sbuffer[] = "GET /GronCan/ / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n";
-    //sprintf(sbuffer, "GET /GronCan/ /LIGHTSTATUS/ %i / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", g);
     int scount = socket.send(sbuffer, sizeof sbuffer);
     printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
  
@@ -71,21 +66,20 @@ printf("Connecting to Ethernet...\n");
   
 }
 
-void LightInfo()
+void SensorsInfo()
 {
     while(true) {
 
-    //float g = Light2.read();
     bool lightstat;
     net.connect();
      
     // Open a socket on the network interface, and create a TCP connection to mbed.org
     socket.open(&net);
  
-    //net.gethostbyname("ifconfig.io", &a);
     a.set_ip_address("10.130.52.204");
     a.set_port(80);
 
+    // Check if the light value is under a certain value (light/dark)
     if(g < 0.3){
         lightstat = 1;
     }
@@ -94,12 +88,14 @@ void LightInfo()
     }
  
     socket.connect(a);
-    // Send a simple http request
+    // Send a simple http request and send light and sound data
     char sbuffer[] = "GET /GronCan/ / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n";
-    sprintf(sbuffer, "GET /GronCan/ /LIGHTSTATUS/ %i / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", lightstat);
+    sprintf(sbuffer, "GET /GronCan/ /LIGHTSTATUS/ %i /SOUND/ %i / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", lightstat, loudestsound);
     int scount = socket.send(sbuffer, sizeof sbuffer);
     printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
- 
+
+    loudestsound = 0;
+    
     // Recieve a simple http response and print out the response line
     char rbuffer[64];
     int rcount = socket.recv(rbuffer, sizeof rbuffer);
@@ -127,7 +123,7 @@ void Time_thread()
         timestamp = time(NULL);
         string str = ctime(&timestamp);
         printf("%s\n", str.substr(11,8).c_str());
-        sprintf(timenow, "Time: %s", str.substr(11,8).c_str());
+        sprintf(timenow, "Time: %s", str.substr(11,8).c_str()); // Saving a substring to "timenow" containing only the part with the time in the string
         BSP_LCD_DisplayStringAt(0, LINE(5), (uint8_t *)timenow, CENTER_MODE); //Display current time reading on LCD display
         wait_us(500000);
     }
