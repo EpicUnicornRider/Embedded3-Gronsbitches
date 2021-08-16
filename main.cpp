@@ -2,6 +2,15 @@
  * Copyright (c) 2006-2020 Arm Limited and affiliates.
  * SPDX-License-Identifier: Apache-2.0
  */
+
+/**
+*       @file main.cpp
+*       @brief This is the main file that will run the program flow
+*
+*       @author Rasmus M. Sørensen
+*
+*       @date 16-08-2021
+*/
 #include "mbed.h"
 #include "DHT.h"
 #include "connection/connection.h"
@@ -9,42 +18,52 @@
 #include <string>
 #include <sstream>
 
-//Pins
-DigitalIn tempHumid = D3;
-
 float tValue;
 float hValue;
-int tVal;
-int hVal;
+bool window1;
 
+extern float temperature();
+extern float humidity();
+extern void openWindow();
+extern void closeWindow();
+extern void startHumidifier();
+extern void stopHumidifier();
 extern void connection(char ip[], int port, char txtbuffer[]);
 
 char ip[] = "10.130.52.204";
 int port = 80;
-char txtbuffer[73];
+char txtbuffer[1500];
 
 // Socket demo
 int main()
 {
-    DHT tempHumidSensor(D3, DHT22);
 
     while(true) {
 
-    tempHumidSensor.readData();
+    tValue = temperature();
+    hValue = humidity();
 
-    tValue = tempHumidSensor.ReadTemperature(CELCIUS);
-    hValue = tempHumidSensor.ReadHumidity();
+    if(tValue > 25) {
+        openWindow();
+        window1 = 1;
+    } else if(tValue < 20) {
+        closeWindow();
+        window1 = 0;
+    }
 
-    tVal = (int)tValue;
-    hVal = (int)hValue;
+    if(hValue < 40) {
+        startHumidifier();
+    } else if (hValue > 60) {
+        stopHumidifier();
+    }
 
-    sprintf(txtbuffer, "GET /GronCan/?sw=1 / TEMP/%d.1 / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", tVal);
+    sprintf(txtbuffer, "GET /GronCan/ /TEMP/ %.1f /HUMID/ %.0f%% /WINDOW/ %i / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", tValue, hValue, window1);
 
     printf("------------------------------\n");
     connection(ip, port, txtbuffer);
 
-    printf("Temperature: %d.1 \n", tVal);
-    printf("Humidity: %d%% \n\n",hVal);
-    ThisThread::sleep_for(15s);
+    printf("Temperature: %.1f \n", tValue);
+    printf("Humidity: %.0f%% \n\n",hValue);
+    ThisThread::sleep_for(1s);
     }
 }
