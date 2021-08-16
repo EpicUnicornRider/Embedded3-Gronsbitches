@@ -21,9 +21,8 @@ int main()
 
     startsystem();
 
-    thread2.start(arm_alarm);
+    thread1.start(arm_alarm);
 
 
-    thread1.start(vibration);
-    //thread2.start(arm_alarm);
+    thread2.start(alarmdetect);
 }   

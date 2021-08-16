@@ -3,6 +3,9 @@
 #include "vibrationsensor.h"
 #include "mbed.h"
 
+bool detecton = false;
+bool alarmtriggered = false;
+
 void startsystem() {
     LCDStart();
     clearscreen();
@@ -10,13 +13,24 @@ void startsystem() {
 }
 
 void stopalarm() {
+    alarmtriggered = false;
+    detecton = false;
     disablealarm();
 }
 
 void armalarm() {
     countdownalarmscreen();
+    detecton = true;
 }
 
-void alarm() {
-    
+void alarmdetect() {
+        while(1) {
+            if(detecton) {
+                if(vibration() && alarmtriggered == false) {
+                    alarmtriggered = true;
+                    alarm();
+                }
+            }
+            ThisThread::sleep_for(50ms);
+        }
 }
