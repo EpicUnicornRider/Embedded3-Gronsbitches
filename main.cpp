@@ -21,6 +21,7 @@
 float tValue;
 float hValue;
 bool window1;
+char txtbuffer[150];
 
 extern float temperature();
 extern float humidity();
@@ -28,11 +29,7 @@ extern void openWindow();
 extern void closeWindow();
 extern void startHumidifier();
 extern void stopHumidifier();
-extern void connection(char ip[], int port, char txtbuffer[]);
-
-char ip[] = "10.130.52.204";
-int port = 80;
-char txtbuffer[1500];
+extern void connection(char txtbuffer[]);
 
 // Socket demo
 int main()
@@ -60,10 +57,10 @@ int main()
     sprintf(txtbuffer, "GET /GronCan/ /TEMP/ %.1f /HUMID/ %.0f%% /WINDOW/ %i / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n", tValue, hValue, window1);
 
     printf("------------------------------\n");
-    connection(ip, port, txtbuffer);
+    connection(txtbuffer);
 
     printf("Temperature: %.1f \n", tValue);
     printf("Humidity: %.0f%% \n\n",hValue);
-    ThisThread::sleep_for(1s);
+    ThisThread::sleep_for(5s);
     }
 }

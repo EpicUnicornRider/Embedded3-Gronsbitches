@@ -15,23 +15,17 @@
 
 class myConnection {
     private:
-        char *address;
-        int port;
         nsapi_error_t error;
 
     public:
+        char *address;
+        int port;
         void socketConnect(char sbuffer[]);
 
-        myConnection(char *ip, int portt) {
-            this->address = ip;
-            this->port = portt;
-        }
-
-        ~myConnection() {
+        /*~myConnection() {
             delete[] address;
 
-            printf("Done\n");
-        }
+        }*/
 };
 
 #endif

@@ -13,15 +13,19 @@
 #include "connection.h"
 
 EthernetInterface net;
-TCPSocket socket;
+
+char ip[] = "10.130.52.204";
+int port = 80;
 
 /** 
 * This is the method to be called in main.cpp
 * @author Rasmus M. Sørensen 
 * @date 16-08-2021
 */
-void connection(char ip[], int port, char txtbuffer[]) {
-    myConnection connection(ip, port);
+void connection(char txtbuffer[]) {
+    myConnection connection;
+    connection.address = ip;
+    connection.port = port;
     connection.socketConnect(txtbuffer);
 }
 
@@ -32,6 +36,10 @@ void connection(char ip[], int port, char txtbuffer[]) {
 * @date 16-08-2021
 */
 void myConnection::socketConnect(char sbuffer[]) {
+            TCPSocket socket;
+            SocketAddress a;
+            
+            //char sbuffer[] = "GET /GronCan/ /TEMP/ 24.0 /HUMID/ 56% /WINDOW/ 0 / HTTP/1.1\r\n HOST: 10.130.52.204\r\n\r\n";
 
             error = net.connect();
 
@@ -42,8 +50,6 @@ void myConnection::socketConnect(char sbuffer[]) {
             }
 
             printf("before\n");
-
-            SocketAddress a;
 
             error = net.get_ip_address(&a);
 
@@ -71,7 +77,7 @@ void myConnection::socketConnect(char sbuffer[]) {
                 printf("Can't connect to server device: %i\n", error);
             }
 
-            int scount = socket.send(sbuffer, strlen(sbuffer));
+            int scount = socket.send(sbuffer, strlen(sbuffer) + 1);
             printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
 
             char rbuffer[64];
@@ -90,4 +96,6 @@ void myConnection::socketConnect(char sbuffer[]) {
             if (error) {
                 printf("Can't disconnect from network: %i \n", error);
             }
+
+            printf("Done\n");
     }
