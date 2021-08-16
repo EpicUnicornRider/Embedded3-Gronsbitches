@@ -1,10 +1,11 @@
 #include "alarm.h"
 #include "controllerscreen.h"
 #include "vibrationsensor.h"
+#include "ethernetcommunication.h"
 #include "mbed.h"
 
 bool detecton = false;
-bool alarmtriggered = false;
+bool alarmtriggeredsystem = false;
 
 void startsystem() {
     LCDStart();
@@ -13,12 +14,14 @@ void startsystem() {
 }
 
 void stopalarm() {
-    alarmtriggered = false;
+    alarmtriggeredsystem = false;
     detecton = false;
+    alarmunarmed();
     disablealarm();
 }
 
 void armalarm() {
+    alarmarmed();
     countdownalarmscreen();
     detecton = true;
 }
@@ -26,8 +29,9 @@ void armalarm() {
 void alarmdetect() {
         while(1) {
             if(detecton) {
-                if(vibration() && alarmtriggered == false) {
-                    alarmtriggered = true;
+                if(vibration() && alarmtriggeredsystem == false) {
+                    alarmtriggeredsystem = true;
+                    alarmtriggered();
                     alarm();
                 }
             }

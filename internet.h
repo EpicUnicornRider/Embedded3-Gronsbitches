@@ -1,6 +1,8 @@
 #ifndef INTERNET_H
 #define INTERNET_H
 
-void internet(char ip[], int port, char txtSend[]);
+#include <string>
+
+void internet(char ip[], int port, std::string txtsend);
 
 #endif /*INTERNET_H*/
