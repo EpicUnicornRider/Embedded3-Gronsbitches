@@ -1,22 +1,28 @@
 #include "connection.h"
 
-
-const int   OFF = 0;
-const int   ON  = 1;
+/**
+ * @brief   Shows The webpage
+ *
+ * @note    Shows the webpage and all the data
+ *          that is relevecant to be shown on the webpage
+ * @author  Kasper Grøn Madsen
+ *
+ * @date    16/08/2021
+ **/
 
 char* showWebPage()
 {
-    
+    //Temp and humid char
     char        roomTempStr[10] = { };
     char        roomHumidStr[10] = { };
  
-    //roomTemp = ds1820.read();
-
+    //convert Temp and humi to char
     sprintf(roomTempStr, "%3.1f", roomTemp);
     sprintf(roomHumidStr, "%3.0f", roomHumid);
     memset(httpBuf, 0, sizeof(httpBuf));
 
-    /*$off*/
+
+    //HTML
     strcat
     (
         httpBuf,
@@ -73,11 +79,13 @@ char* showWebPage()
 
         "<body>"
             "<h2><a href=\".\" title=\"Click to refresh the page\">Grøns Cannabis Farm</a></h2>"
+            //vis temperatur
             "<pre>Temperature:\t"
     );
     strcat(httpBuf, roomTempStr);
     strcat(httpBuf, "&deg;C</pre>");
 
+    //vis humidity
     strcat
     (
        httpBuf,
@@ -86,12 +94,13 @@ char* showWebPage()
     strcat(httpBuf, roomHumidStr);
     strcat(httpBuf, "%</pre>");
 
+    //vis lysets status
     strcat
     (
        httpBuf,
        "<pre>Drivhus lys:\t"
     );
-    if(lightbulb == ON) {
+    if(lightbulb == true) {
        strcat
        (
            httpBuf,
@@ -111,12 +120,13 @@ char* showWebPage()
            "</pre>"
     );
 
+    //vis vinduets status
     strcat
     (
        httpBuf,
        "<pre>Vindue:\t"
     );
-    if(window == ON) {
+    if(window == true) {
        strcat
        (
            httpBuf,
@@ -136,12 +146,13 @@ char* showWebPage()
            "</pre>"
     );
 
+    //vis armeret status
     strcat
     (
        httpBuf,
        "<pre>Alarm armeret:\t"
     );
-    if(armed == ON) {
+    if(armed == true) {
        strcat
        (
            httpBuf,
@@ -165,12 +176,13 @@ char* showWebPage()
            "</a>"
     );
 
+    //vis alarm status
     strcat
     (
        httpBuf,
        "<pre>Alarm Igang:\t"
     );
-    if(alarm == ON) {
+    if(alarm == true) {
        strcat
        (
            httpBuf,
@@ -196,6 +208,5 @@ char* showWebPage()
            "<pre>2021 Grøns Bitches</pre>"
        "</body>"
     );
-    /*$on*/
     return httpBuf;
 }
