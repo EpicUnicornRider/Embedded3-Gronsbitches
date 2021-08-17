@@ -9,12 +9,14 @@ bool detecton = false;
 bool alarmtriggeredsystem = false;
 int cnt = 0;
 
+//Initilize the screen.
 void startsystem() {
     LCDStart();
     clearscreen();
     startuptext();
 }
 
+//Disarm the alarm and send disarm request to server.
 void stopalarm() {
     alarmtriggeredsystem = false;
     detecton = false;
@@ -22,6 +24,7 @@ void stopalarm() {
     disablealarm();
 }
 
+//Start the alarm enablement countdown and send request to server telling the alarm has been armed.
 void armalarm() {
     tryingtoarm();
     alarmarmed();
@@ -29,6 +32,7 @@ void armalarm() {
     detecton = true;
 }
 
+//Detect if vibration is detected and get sound status to choose if there's a too loud sound.
 void alarmdetect() {
         while(1) {
             if(detecton) {

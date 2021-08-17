@@ -2,6 +2,8 @@
 
 DigitalIn vibrationSensor = D5;
 
+
+//Check if there's any vibration, value is printed in console and if detected func will return true.
 bool vibration() {
 
     int i = 0;

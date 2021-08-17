@@ -5,6 +5,8 @@
 #include <string>
 #include "mbed.h"
 
+//Identifiers needed for functionality.
+
     EthernetInterface net;
     SocketAddress a;
     TCPSocket socket;
@@ -14,8 +16,9 @@ class Ethernet {       // The class
     char *address;
     int port;
     
+    //Connect to server.
     void connect() {
-        printf("Ethernet socket example\n");
+        printf("Connecting..\n");
         net.connect();
  
         net.get_ip_address(&a);
@@ -30,11 +33,13 @@ class Ethernet {       // The class
         socket.connect(a);
     }
 
+    //Send the request to the server.
     void sendGetRequest(char sbuffer[]) {
         int scount = socket.send(sbuffer, strlen(sbuffer) + 1);
         printf("sent %d [%.*s]\n", scount, strstr(sbuffer, "\r\n") - sbuffer, sbuffer);
     }
 
+    //Recive request, this function is not void as it can return the recived output.
     string receiveRequest() {
         char rbuffer[64];
         int rcount = socket.recv(rbuffer, sizeof rbuffer);
@@ -45,13 +50,14 @@ class Ethernet {       // The class
         return rbuffer;
     }
 
+    //Close the connection.
     void closeConnection() {
         // Close the socket to return its memory and bring down the network interface
         socket.close();
     
         // Bring down the ethernet interface
         net.disconnect();
-        printf("Done\n");
+        printf("Disconnecting\n");
     }
 };
 

@@ -4,6 +4,7 @@
 #include "EthernetInterface.h"
 #include "ethernet.h"
 
+//This function will instanciate ethernet.h and run the internet stack.
 std::string internet(char ip[], int port, std::string txtSend) {
 
     char txtarray[100];

@@ -11,12 +11,11 @@ Thread thread2;
 
 int main()
 {
-    int num = 1;
-
     startsystem();
 
+    //This thread will run function to detect if alarm button to activate/deactive is pressed.
     thread1.start(arm_alarm);
 
-
+    //This thread will check if alarm is tripped, checking the vibration sensor and sending request to server for sound data.
     thread2.start(alarmdetect);
 }   
