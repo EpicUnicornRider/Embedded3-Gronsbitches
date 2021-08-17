@@ -2,10 +2,12 @@
 #include "controllerscreen.h"
 #include "vibrationsensor.h"
 #include "ethernetcommunication.h"
+#include "internet.h"
 #include "mbed.h"
 
 bool detecton = false;
 bool alarmtriggeredsystem = false;
+int cnt = 0;
 
 void startsystem() {
     LCDStart();
@@ -35,11 +37,14 @@ void alarmdetect() {
                     alarmtriggered();
                     alarm();
                 }
+
+                if (cnt > 10) {
+                    cnt = 0;
+                    getsoundstatus();
+                }
             }
 
-            //TODO: THIS NEEDS TO GET DATA FROM GRON
-            //printf("%s", getsoundstatus().c_str());
-            //getsoundstatus()
+            cnt++;
             ThisThread::sleep_for(50ms);
         }
 }

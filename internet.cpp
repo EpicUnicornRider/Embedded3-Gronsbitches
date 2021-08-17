@@ -25,3 +25,11 @@ std::string internet(char ip[], int port, std::string txtSend) {
 
     return recv;
 }
+
+void closeconnection() {
+
+    Ethernet ethernet;
+
+    ethernet.closeConnection();
+
+}
