@@ -1,3 +1,11 @@
+/**
+*   @file vibrationsensor.cpp
+*   @brief The function in this file will monitor the vibration sensor and send back true/false.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
 #include "mbed.h"
 
 DigitalIn vibrationSensor = D5;

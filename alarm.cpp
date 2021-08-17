@@ -1,3 +1,12 @@
+/**
+*   @file alarm.cpp
+*   @brief This file contains the code to arm the alarm.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
+
 #include "mbed.h"
 #include "alarmsystem.h"
 

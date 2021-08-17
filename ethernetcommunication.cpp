@@ -1,3 +1,11 @@
+/**
+*   @file ehternetcommunication.cpp
+*   @brief This file acts as a kind of mini api for the application to easily communicate with the server.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
 #include "internet.h"
 #include <string> 
 

@@ -1,3 +1,11 @@
+/**
+*   @file alarmsystem.cpp
+*   @brief This file contains all functions to start, activate and deactivate system + detecting if alarm is triggered.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
 #include "alarm.h"
 #include "controllerscreen.h"
 #include "vibrationsensor.h"

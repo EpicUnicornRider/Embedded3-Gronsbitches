@@ -1,3 +1,12 @@
+/**
+*   @file ethernet.h
+*   @brief This header file contains the class that is used for internet communiction over ethernet.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
+
 #ifndef ETHERNET_H
 #define ETHERNET_H
 

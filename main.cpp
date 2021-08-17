@@ -1,3 +1,12 @@
+/**
+*   @file main.cpp
+*   @brief Main file to start program.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
+
 #include "mbed.h"
 #include "internet.h"
 #include "vibrationsensor.h"

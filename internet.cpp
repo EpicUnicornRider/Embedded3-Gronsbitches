@@ -1,3 +1,12 @@
+/**
+*   @file internet.cpp
+*   @brief This file contains functions to communicate with the server, only the mini api calls these functions.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
+
 #include "mbed.h"
 #include <stdio.h>
 #include <string>
@@ -27,6 +36,7 @@ std::string internet(char ip[], int port, std::string txtSend) {
     return recv;
 }
 
+//This function is not used.
 void closeconnection() {
 
     Ethernet ethernet;

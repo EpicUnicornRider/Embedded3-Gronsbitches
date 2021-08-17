@@ -1,3 +1,12 @@
+/**
+*   @file controllerscreen.cpp
+*   @brief This file contains all functions to control the screen.
+*
+*   @author Oliver P. Hartvigsen.
+*   
+*   @date 2021-08-17
+*/
+
 #include "mbed.h"
 #include <stdio.h>
 #include <string>
