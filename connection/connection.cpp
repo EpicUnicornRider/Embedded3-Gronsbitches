@@ -49,11 +49,7 @@ void myConnection::socketConnect(char sbuffer[]) {
                 printf("Successfully connected \n");
             }
 
-            printf("before\n");
-
             error = net.get_ip_address(&a);
-
-            printf("after\n");
 
             if(error) {
                 printf("Could not get an IP address: %i\n", error);

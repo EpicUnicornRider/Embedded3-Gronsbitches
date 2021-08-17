@@ -16,6 +16,10 @@ class myClimate {
 
     public:
         float value;
+        void openWindow();
+        void closeWindow();
+        void startHumidifier();
+        void stopHumidifier();
 
         myClimate(float value) {
             this->value = value;

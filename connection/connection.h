@@ -22,10 +22,6 @@ class myConnection {
         int port;
         void socketConnect(char sbuffer[]);
 
-        /*~myConnection() {
-            delete[] address;
-
-        }*/
 };
 
 #endif
