@@ -30,10 +30,10 @@ bool vibration() {
     }
     
     if(detected == 1) {
-        printf("Value: %d \n", detected);
+        printf("Vibration detected: True \n");
         return true;
     } else {
-        printf("Value: %d \n", detected);
+        printf("Vibration detected: False \n");
         return false;
     }
 
