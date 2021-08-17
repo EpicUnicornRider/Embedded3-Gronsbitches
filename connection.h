@@ -63,7 +63,7 @@ int8_t analyseURL(char* url)
     getData(url);
 
     //if sound is requested and its the alarmclient that wants it return -4
-    if(getSound == true && alarmClient == true){
+    if(getSound == true){
         return (-4);
     }
 
@@ -112,7 +112,6 @@ void sendHTTP(TCPSocket* client, char* header, char* content)
     strcat(header, "Connection: About to close\r\n\r\n");
 
     char    c = content[0];
-    //memmove(httpBuf + strlen(header), httpBuf, strlen(content));    // make room for the header
     strcpy(httpBuf, header);                                        // copy the header on front of the content
     httpBuf[strlen(header)] = c;
     client->send((uint8_t*)httpBuf, strlen(httpBuf));

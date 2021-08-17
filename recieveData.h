@@ -7,14 +7,13 @@ std::string        placeholder;
 float              roomTemp;
 float              roomHumid;
 
-bool               alarmClient  = 0;
 bool               alarm        = 0;
 bool               armed        = 0;
 bool               lightbulb    = 0;
 bool               window       = 0;
 bool               getSound     = 0;
 
-int                sound;
+int                soundLVL;
 
 /**
  * @brief   Get data gets and seperates the data
@@ -57,7 +56,6 @@ void getData(char* url){
     //checks if  alarm is on or off
     else if(sendType == "ALARM"){
         //Only alarmclient sends armed or alarm so we save the info that the alarmclient is connected now
-        alarmClient = true;
         placeholder = SepURL;
         if(placeholder == "1"){
             alarm = true;
@@ -72,7 +70,6 @@ void getData(char* url){
     //checks if armed is on or off
     else if(sendType == "ARMED"){
         //Only alarmclient sends armed or alarm so we save the info that the alarmclient is connected now
-        alarmClient = true;
         placeholder = SepURL;
         if(placeholder == "1"){
             armed = true;
@@ -103,8 +100,8 @@ void getData(char* url){
     }
     //check if sound and if it is converts and saves the data as a int
     else if(sendType == "SOUND"){
-        sound = atof(SepURL);      
-        printf("***************\n Sound recieved: %i \n***************\n", sound);
+        soundLVL = atof(SepURL);      
+        printf("***************\n Sound recieved: %i \n***************\n", soundLVL);
     }
 
     //saves the current sendtype so it will be checked in the next loop

@@ -6,7 +6,7 @@
  * @note    Everything that needs to happen when the client connects
  *          return a confirmation.
  *          return data.
- *           unautorized access
+ *          unautorized access
  *
  * @author  Kasper Grøn Madsen
  *
@@ -21,25 +21,13 @@ void clientCon(){
             client->getpeername(&addr);
             printf("Connection succeeded!\n\rIP: %s\n\r", addr.get_ip_address());
             client->recv(httpBuf, 1500);
-            //listening for http GET request
-            if (strncmp(httpBuf, "GET", 3) != 0) {
-                strcpy(httpHeader, "HTTP/1.0 200 OK top");
-                strcpy(httpBuf, "<h1>200 OK</h1>");
-                sendHTTP(client, httpHeader, httpBuf);
-            }
-            else if ((strncmp(httpBuf, "GET", 3) == 0) && (strncmp(httpBuf + 3, " / ", 3) == 0)) {
-                strcpy(httpHeader, "HTTP/1.0 200 OK buttom");
-                strcpy(httpBuf, "<p>Usage: http://host_or_ip/password</p>\r\n");
-                sendHTTP(client, httpHeader, httpBuf);
-            }
-            else {
                 int cmd = analyseURL(httpBuf);
                 switch (cmd) {
                     //return sound to
                     case -4:
-                        sprintf(httpHeader, "HTTP/1.0 200 OK /SOUND/ %i", sound);
+                        printf("***************\n Sound SENDING: %i \n***************\n", soundLVL);
+                        sprintf(httpHeader, "HTTP/1.0 200 OK /SOUND/ %i", soundLVL);
                         sendHTTP(client, httpHeader, httpBuf);
-                        sound = false;
                         break;
                     case -3:
                         //default
@@ -59,10 +47,9 @@ void clientCon(){
                         strcpy(httpBuf, "<h1>401 Unauthorized</h1>");
                         sendHTTP(client, httpHeader, httpBuf);
                         break;
-                }
+                
             }
             getSound = false;
-            alarmClient = false;
             client->close();
         }   
 }
